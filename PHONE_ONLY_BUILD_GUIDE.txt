@@ -1,0 +1,17 @@
+AURIC BLOOM — BUILD AN APK USING ONLY YOUR ANDROID PHONE
+
+This package includes a GitHub Actions workflow that builds a test/install APK in the cloud. The APK is NOT inside this ZIP yet; the cloud build must run first.
+
+1. On your phone, open https://github.com/signup and create/sign into a GitHub account using your email. Verify your email. Never share your password or verification codes.
+2. In GitHub, create a NEW PUBLIC repository named AuricBloomAndroid (public repositories can use GitHub-hosted Actions without private-repo minute constraints; check GitHub's current terms). Do not add a README or license during creation.
+3. Easiest upload route: open the repository page in your phone browser, use the browser menu's Desktop site option if needed, choose Add file > Upload files, then upload the CONTENTS of the AuricBloomAndroid folder from this ZIP, including the hidden .github/workflows/build-apk.yml file. If your ZIP app hides dot-folders, make sure the .github folder is included; otherwise the workflow will not be uploaded.
+4. Commit the uploaded files to the main branch.
+5. Open the repository's Actions tab, choose “Build AURIC BLOOM APK”, tap Run workflow, and confirm.
+6. Wait for the workflow to finish with a green check. Open that run and scroll to Artifacts. Tap Auric-Bloom-APK to download the ZIP containing app-debug.apk.
+7. Extract the downloaded artifact ZIP, tap app-debug.apk, and follow Android's prompts to allow installation from that source if you choose to proceed.
+
+NOTES
+- This produces a debug/test APK signed with the standard debug key. It is suitable for testing, not a production release or Google Play publication.
+- Do not put passwords, payment secrets, API keys, or private signing keys in the repository.
+- This app is a prototype. It does not yet have secure online accounts, a shared cloud database, live payments, production-grade order tracking, or a secured admin system.
+- The storefront/admin currently uses browser-local storage; changes are not shared across different customers/devices.
